@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "680080930830",
+    "project_id": "gpslab-d0d9e",
+    "storage_bucket": "gpslab-d0d9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680080930830:android:81fea31523b8d32d02245f",
+        "android_client_info": {
+          "package_name": "com.vimal.gpslab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "680080930830-2mmnfk818dtjhffr09osnlbr8f5dn855.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA061rJanlvymuPT1cY-7p1JOnaJcrrCQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "680080930830-2mmnfk818dtjhffr09osnlbr8f5dn855.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

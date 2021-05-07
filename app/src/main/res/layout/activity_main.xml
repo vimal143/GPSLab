@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="56dp"
+
+
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="642dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@android:drawable/menu_frame"
+
+        android:layout_marginTop="32dp"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="256dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <EditText
+        android:id="@+id/Phone"
+        android:layout_width="256dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Mobile no"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <EditText
+        android:id="@+id/Address"
+        android:layout_width="256dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
+        app:layout_constraintEnd_toEndOf="@+id/Phone"
+        app:layout_constraintStart_toStartOf="@+id/Phone"
+        app:layout_constraintTop_toBottomOf="@+id/Phone" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="256dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="228dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Address"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Address">
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/radiogrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@id/gender"
+            android:layout_toRightOf="@id/gender"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Male"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Female"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/drivingLic"
+        android:layout_width="256dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Driving Licence No"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/Address"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Address"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="96dp"
+        android:background="@android:color/holo_purple"
+        android:text="Submit"
+        android:onClick="sendData"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toEndOf="@+id/drivingLic"
+        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintStart_toStartOf="@+id/drivingLic"
+        app:layout_constraintTop_toBottomOf="@+id/drivingLic" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Licence Image"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/drivingLic"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/drivingLic"
+        app:layout_constraintTop_toBottomOf="@+id/drivingLic" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Upload"
+        android:onClick="uploadLicence"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/drivingLic"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/drivingLic"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:onClick="selectImage"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image"
+        app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
